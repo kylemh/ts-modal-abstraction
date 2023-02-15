@@ -1,0 +1,95 @@
+/**
+ * This theme follows the system-ui spec
+ * @see https://system-ui.com/theme
+ */
+export const theme = {
+  colors: {
+    brandBlue: 'hsla(211, 76%, 24%, 1)',
+    brandRed: 'hsla(8,86%,56%,1)',
+    brandGreen: 'hsla(175,22%,55%,1)',
+    brandYellow: 'hsla(50,100%,50%,1)',
+    customBlue30: 'hsla(213, 24%, 47%, 1)',
+    customBlue50: 'hsla(211, 76%, 24%, 1)',
+    customBlue60: 'hsla(214, 58%, 24%, 1)',
+    customBlue90: 'hsla(215, 53%, 23%, 1)',
+    customGray00: 'hsla(210, 12%, 97%, 1)',
+    customGray10: 'hsla(210,8%,80%,1)',
+    customGray30: 'hsla(218,11%,61%,1)',
+    customGray50: 'hsla(212,8%,47%,1)',
+    customGreen00: 'hsla(180,23%,95%,1)',
+    customGreen10: 'hsla(171,25%,90%,1)',
+    customGreen50: 'hsla(175,23%,67%,1)',
+    customGreen60: 'hsla(172,100%,26%,1)',
+    customGreen80: 'hsla(172,100%,23%,1)',
+    customRed10: 'hsla(8, 97%, 71%, 1)',
+    customRed50: 'hsla(8,86%,56%,1)',
+    customRed60: 'hsla(8,93%,47%,1)',
+    customRed70: 'hsla(8, 94%, 44%, 1)',
+    customRed80: 'hsla(8,100%,37%,1)',
+    white: 'hsla(0,0%,100%,1)',
+    transparent: 'hsla(0,0%,0%,0.001)',
+  },
+  space: {
+    // used for margins + paddings + grid gaps + flex gaps
+    10: '4px',
+    20: '8px',
+    30: '12px',
+    40: '16px',
+    50: '24px',
+    60: '32px',
+    70: '48px',
+    80: '64px',
+    90: '96px',
+    100: '128px',
+  },
+  shadows: {
+    dp2: '0px 0px 1px hsla(208, 7%, 46%, 0.16), 0px 2px 8px hsla(175, 22%, 67%, 0.24)',
+    dp6: '0px 0px 1px hsla(208, 7%, 46%, 0.16), 0px 6px 12px hsla(175, 22%, 67%, 0.32)',
+    dp12: '0px 0px 1px hsla(208, 7%, 46%, 0.16), 0px 12px 24px hsla(175, 22%, 67%, 0.48)',
+    dp24: '0px 0px 1px hsla(208, 7%, 46%, 0.16), 0px 24px 48px hsla(175, 22%, 67%, 0.6)',
+  },
+  fontSizes: {
+    12: '12px',
+    13: '13px',
+    15: '15px',
+    16: '16px',
+    20: '20px',
+    24: '24px',
+    28: '28px',
+    36: '36px',
+    64: '64px',
+    84: '84px',
+  },
+  fonts: {
+    circularPro: 'Circular-Pro, Helvetica, Arial, sans-serif',
+    mercury: 'MercuryTextG4, Georgia, Times New Roman, serif',
+  },
+  fontWeights: {
+    circular300: 300,
+    mercury400: 400,
+    circular500: 500,
+    mercury600: 600,
+    circular700: 700,
+  },
+  radii: {
+    circle: '50%',
+    pill: '999px',
+    small: '3px',
+  },
+  mediaQueries: {
+    prefersReducedMotion: `@media (prefers-reduced-motion)`,
+    aboveXXL: `@media screen and (min-width: 1280px)`,
+    belowXXL: `@media screen and (max-width: 1279px)`,
+    aboveXL: `@media screen and (min-width: 1200px)`,
+    belowXL: `@media screen and (max-width: 1199px)`,
+    aboveLarge: `@media screen and (min-width: 992px)`,
+    belowLarge: `@media screen and (max-width: 991px)`,
+    aboveMedium: `@media screen and (min-width: 768px)`,
+    belowMedium: `@media screen and (max-width: 767px)`,
+    aboveSmall: `@media screen and (min-width: 576px)`,
+    belowSmall: `@media screen and (max-width: 575px)`,
+  },
+} as const;
+
+export type ThemeType = typeof theme;
+export type ThemeColorType = keyof ThemeType['colors'];
